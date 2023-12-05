@@ -1,0 +1,36 @@
+:root {
+  --background-image: url("../../../images/image_2.jpg");
+  --text-color-main: #fff;
+  --text-color-accent: #faff00;
+  --header-font-family-main: "Itim";
+  --header-font-family-accent: "Irish Grover";
+  --decoration-text-color: #f00;
+  --decoration-gradient-color: #ab0303;
+  --title-stroke-color: #000;
+  --description-title-font-family: "Jacques Francois Shadow";
+  --description-text-font-family: "JejuGothic";
+  --buttons-font-family: "Roboto";
+  --page-gap: 50px;
+  --text-size-xl: clamp(3.75rem, -0.8654rem + 7.2115vw, 5.625rem);
+  --text-size-l: clamp(1.875rem, -0.2788rem + 3.3654vw, 2.75rem);
+  --text-size-m: 32px;
+  --text-size-s: clamp(1.5rem, 0.5769rem + 1.4423vw, 1.875rem);
+  --menu-gap: 30px;
+}
+
+@media (width < 1024px) {
+  :root {
+    --text-size-xl: 90px;
+    --text-size-l: 44px;
+    --text-size-m: 40px;
+    --text-size-s: 35px;
+  }
+}
+
+@media (width < 768px) {
+  :root {
+    --text-size-xl: clamp(3.75rem, 2.4107rem + 6.6964vw, 5.625rem);
+    --text-size-m: 40px;
+    --text-size-s: clamp(1.5625rem, 1.1161rem + 2.2321vw, 2.1875rem);
+  }
+}

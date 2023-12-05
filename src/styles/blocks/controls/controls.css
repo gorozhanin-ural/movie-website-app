@@ -1,0 +1,14 @@
+.controls {
+  display: flex;
+  flex-direction: column;
+  grid-area: controls;
+  align-items: flex-start;
+  row-gap: 15px;
+  padding: 50px 0 80px;
+}
+
+@media (width < 768px) {
+  .controls {
+    padding: 50px 10px;
+  }
+}

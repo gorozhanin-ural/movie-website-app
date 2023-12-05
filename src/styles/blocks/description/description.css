@@ -1,0 +1,12 @@
+.description {
+  display: flex;
+  flex-direction: column;
+  grid-area: description;
+  row-gap: 20px;
+}
+
+@media (width < 768px) {
+  .description {
+    padding: 0 10px;
+  }
+}

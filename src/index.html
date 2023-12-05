@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bundle.css" />
+    <title>Jujutsu Kaisen</title>
+  </head>
+  <body class="page">
+    <header class="header">
+      <nav class="header__menu">
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Season</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Reviews</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__heading">
+        <h1 class="header__title">Jujutsu Kaisen</h1>
+        <p class="header__subtitle">Gordx universe</p>
+      </div>
+      <nav class="header__menu">
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">
+              <svg
+                class="header__menu-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M21 21L16.65 16.65"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">
+              <svg
+                class="header__menu-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Sign up</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content">
+      <section class="description">
+        <h2 class="description__title">Jujutsu Kaisen</h2>
+        <div class="description__text">
+          <p class="description__paragraph">
+            The Story of <span class="text-accent">Jujutsu Kaisen</span> is set
+            in a world where cursed spirit feed on unsuspecting humans and
+            fragments of the legendary and feared demon
+            <span class="text-accent">Rymon Sukuna</span> have lost and
+            scattered about.
+          </p>
+        </div>
+      </section>
+      <section class="controls">
+        <img class="controls__rating" src="./images/stars.png" alt="" />
+        <div class="controls__buttons">
+          <button type="button" class="controls__play-button">
+            Play now<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="33"
+              height="36"
+              viewBox="0 0 33 36"
+              fill="none"
+            >
+              <path
+                d="M30.5 13.6699C33.8333 15.5944 33.8333 20.4056 30.5 22.3301L8 35.3205C4.66667 37.245 0.5 34.8394 0.5 30.9904L0.5 5.00962C0.5 1.16062 4.66667 -1.24501 8 0.679492L30.5 13.6699Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <button type="button" class="controls__trailer-button">
+            Trailer
+          </button>
+        </div>
+      </section>
+      <section class="images">
+        <ul class="images__list">
+          <li class="images__item">
+            <img class="images__image" src="./images/image_1.jpg" alt="" />
+          </li>
+          <li class="images__item">
+            <img class="images__image" src="./images/image_2.jpg" alt="" />
+          </li>
+          <li class="images__item">
+            <img class="images__image" src="./images/image_3.jpg" alt="" />
+          </li>
+          <li class="images__item">
+            <img class="images__image" src="./images/image_4.jpg" alt="" />
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <script>
+      let images = document.querySelectorAll(".images__image");
+      let cover = document.querySelectorAll(".page::before");
+
+      function changeBackground(event) {
+        newBackground = "url(../../." + event.target.getAttribute("src") + ")";
+        console.log(newBackground);
+        document.documentElement.style.setProperty(
+          "--background-image",
+          newBackground
+        );
+      }
+
+      images.forEach((image) =>
+        image.addEventListener("click", (event) => changeBackground(event))
+      );
+    </script>
+  </body>
+</html>

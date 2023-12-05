@@ -1,0 +1,21 @@
+.header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--header-font-family-main, "Itim"), sans-serif;
+}
+
+@media (width < 1024px) {
+  .header {
+    flex-direction: column;
+    row-gap: 35px;
+  }
+}
+
+@media (width < 768px) {
+  .header {
+    row-gap: 20px;
+  }
+}

@@ -1,0 +1,8 @@
+.controls__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  font-family: var(--buttons-font-family, "Roboto"), sans-serif;
+  font-weight: 600;
+  font-size: var(--text-size-l, 44px);
+}

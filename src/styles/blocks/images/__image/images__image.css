@@ -1,0 +1,6 @@
+.images__image {
+  display: block;
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}

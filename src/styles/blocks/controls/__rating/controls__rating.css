@@ -1,0 +1,5 @@
+.controls__rating {
+  inline-size: 100%;
+  max-inline-size: 162px;
+  padding-inline-start: 30px;
+}

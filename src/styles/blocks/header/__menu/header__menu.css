@@ -1,0 +1,13 @@
+.header__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 20%;
+  font-size: var(--text-size-m, 32px);
+}
+
+@media (width < 1024px) {
+  .header__menu {
+    inline-size: 100%;
+  }
+}

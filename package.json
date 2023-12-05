@@ -1,0 +1,23 @@
+{
+  "name": "project-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp watchapp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-plumber": "^1.2.1",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-use-logical": "^2.1.0"
+  },
+  "description": ""
+}

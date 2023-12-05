@@ -1,0 +1,39 @@
+@font-face {
+  font-family: Itim;
+  src: local("Itim"), url("../fonts/Itim/Itim-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Irish Grover";
+  src: local("Irish Grover"),
+    url("../fonts/IrishGrover/IrishGrover-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jacques Francois Shadow";
+  src: local("Jacques Francois Shadow"),
+    url("../fonts/JacquesFrancoisShadow/JacquesFrancoisShadow-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: JejuGothic;
+  src: local("JejuGothic"),
+    url("../fonts/JejuGothic/JejuGothic-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: local("Roboto"),
+    url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}

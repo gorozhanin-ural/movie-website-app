@@ -1,0 +1,22 @@
+.header__title {
+  color: var(--decoration-text-color, #f00);
+  font-family: var(--header-font-family-accent, "Irish Grover"), sans-serif;
+  font-size: var(--text-size-xl, 90px);
+  text-align: center;
+}
+
+@supports not (-webkit-text-stroke: 1px var(--title-stroke-color, #000)) {
+  .header__title {
+    text-shadow: -1px 0 var(--title-stroke-color, #000),
+      0 1px var(--title-stroke-color, #000),
+      1px 0 var(--title-stroke-color, #000),
+      0 -1px var(--title-stroke-color, #000);
+  }
+}
+
+@supports (-webkit-text-stroke: 1px var(--title-stroke-color, #000)) {
+  .header__title {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--title-stroke-color, #000);
+  }
+}

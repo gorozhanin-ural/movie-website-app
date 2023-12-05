@@ -1,0 +1,12 @@
+.content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template: "description description ." min-content "controls controls controls" min-content "images images images" min-content / 1fr 1fr 1fr;
+}
+
+@media (width < 1024px) {
+  .content {
+    grid-template: "description description description" min-content "controls controls controls" min-content "images images images" min-content / 1fr 1fr 1fr;
+  }
+}

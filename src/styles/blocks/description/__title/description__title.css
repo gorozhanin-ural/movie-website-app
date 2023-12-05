@@ -1,0 +1,5 @@
+.description__title {
+  font-family: var(--description-title-font-family, "Jacques Francois Shadow"),
+    sans-serif;
+  font-size: var(--text-size-xl, calc(100vw / 16));
+}

@@ -1,0 +1,4 @@
+.header__menu-icon {
+  inline-size: var(--text-size-m, 32px);
+  block-size: var(--text-size-m, 32px);
+}

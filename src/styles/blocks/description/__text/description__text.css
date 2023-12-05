@@ -1,0 +1,17 @@
+.description__text {
+  max-inline-size: 630px;
+  font-family: var(--description-text-font-family, JejuGothic), sans-serif;
+  font-size: var(--text-size-m, 32px);
+}
+
+@media (width < 1024px) {
+  .description__text {
+    max-inline-size: none;
+  }
+}
+
+@media (width < 768px) {
+  .description__text {
+    font-size: var(--text-size-s, 25px);
+  }
+}

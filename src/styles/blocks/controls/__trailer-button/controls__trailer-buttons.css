@@ -1,0 +1,9 @@
+.controls__trailer-button {
+  border: none;
+  padding-inline-start: 30px;
+  color: currentcolor;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  background-color: transparent;
+}
