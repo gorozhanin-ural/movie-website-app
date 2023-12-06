@@ -1,7 +1,6 @@
 .header__heading {
   display: flex;
   flex-direction: column;
-  grid-area: "heading";
   align-items: center;
   row-gap: 5px;
   padding: 0 50px;

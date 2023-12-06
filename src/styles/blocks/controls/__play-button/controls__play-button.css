@@ -1,13 +1,44 @@
 .controls__play-button {
+  position: relative;
   display: flex;
   align-items: center;
   column-gap: 20px;
   border: none;
   border-radius: 40px;
   padding: 11px 23px;
+  overflow: hidden;
   color: currentcolor;
   font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
   background-color: var(--decoration-text-color, #f00);
+  cursor: pointer;
+}
+
+.controls__play-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  border-radius: 40px;
+  opacity: 1;
+  background: rgb(0 0 0 / 50%);
+  transition: transform 0.3s, opacity 0.1s;
+  transform: translateX(-100%);
+}
+
+.controls__play-button:hover::before {
+  transform: translateX(0);
+}
+
+.controls__play-button:focus {
+  outline: none;
+}
+
+.controls__play-button:focus-visible::before {
+  transform: translateX(0);
+}
+
+.controls__play-button:active::before {
+  opacity: 0;
 }

@@ -1,9 +1,59 @@
 .controls__trailer-button {
+  position: relative;
+  margin-inline-start: 30px;
   border: none;
-  padding-inline-start: 30px;
+  overflow: hidden;
   color: currentcolor;
   font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
   background-color: transparent;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.controls__trailer-button::before {
+  content: "";
+  position: absolute;
+  display: block;
+  inline-size: 200%;
+  block-size: 0.2rem;
+  background: linear-gradient(
+    to right,
+    transparent 0 30%,
+    var(--decoration-text-color, #f00),
+    transparent 70% 100%
+  );
+  transition: transform 1s;
+  transform: translateX(-100%);
+  inset-inline-start: 0;
+  inset-block-end: 5px;
+}
+
+.controls__trailer-button:hover::before {
+  transform: translateX(-50%);
+  animation: move 1s 0.8s infinite alternate ease-in-out;
+}
+
+.controls__trailer-button:focus {
+  outline: none;
+}
+
+.controls__trailer-button:focus-visible::before {
+  transform: translateX(-50%);
+  animation: move 1s 0.8s infinite alternate ease-in-out;
+}
+
+.controls__trailer-button:active {
+  opacity: 0.5;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }

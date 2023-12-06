@@ -1,2 +1,4 @@
 .images__item {
+  flex-grow: 1;
+  flex-basis: 280px;
 }

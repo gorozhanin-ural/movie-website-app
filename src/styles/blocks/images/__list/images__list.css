@@ -1,12 +1,6 @@
 .images__list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: min-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   gap: 25px;
-}
-
-@media (width < 1024px) {
-  .images__list {
-    grid-template-columns: 1fr;
-  }
 }

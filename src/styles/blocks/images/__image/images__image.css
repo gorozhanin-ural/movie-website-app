@@ -3,4 +3,22 @@
   inline-size: 100%;
   object-fit: cover;
   object-position: center;
+  transition: box-shadow 0.2s, scale 0.2s;
+  cursor: pointer;
+}
+
+.images__image:hover {
+  box-shadow: 0 0 30px var(--decoration-text-color, #f00);
+}
+
+.images__image:focus {
+  outline: none;
+}
+
+.images__image:focus-visible {
+  box-shadow: 0 0 30px var(--decoration-text-color, #f00);
+}
+
+.images__image:active {
+  scale: 0.99;
 }

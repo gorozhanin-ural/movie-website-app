@@ -79,7 +79,7 @@
             </a>
           </li>
           <li class="header__menu-item">
-            <a class="header__menu-link" href="#">Sign up</a>
+            <a class="header__menu-link" href="#">Sign&nbsp;up</a>
           </li>
         </ul>
       </nav>
@@ -89,19 +89,20 @@
         <h2 class="description__title">Jujutsu Kaisen</h2>
         <div class="description__text">
           <p class="description__paragraph">
-            The Story of <span class="text-accent">Jujutsu Kaisen</span> is set
-            in a world where cursed spirit feed on unsuspecting humans and
-            fragments of the legendary and feared demon
-            <span class="text-accent">Rymon Sukuna</span> have lost and
-            scattered about.
+            The Story of&nbsp;<span class="text-accent">Jujutsu Kaisen</span>
+            is&nbsp;set in&nbsp;a&nbsp;world where cursed spirit feed
+            on&nbsp;unsuspecting humans and fragments of&nbsp;the legendary and
+            feared demon <span class="text-accent">Rymon Sukuna</span> have lost
+            and scattered about.
           </p>
         </div>
       </section>
       <section class="controls">
-        <img class="controls__rating" src="./images/stars.png" alt="" />
+        <img class="controls__rating" src="./images/stars.png" alt="Rating" />
         <div class="controls__buttons">
           <button type="button" class="controls__play-button">
             Play now<svg
+              class="controls__play-icon"
               xmlns="http://www.w3.org/2000/svg"
               width="33"
               height="36"
@@ -110,7 +111,7 @@
             >
               <path
                 d="M30.5 13.6699C33.8333 15.5944 33.8333 20.4056 30.5 22.3301L8 35.3205C4.66667 37.245 0.5 34.8394 0.5 30.9904L0.5 5.00962C0.5 1.16062 4.66667 -1.24501 8 0.679492L30.5 13.6699Z"
-                fill="white"
+                fill="currentColor"
               />
             </svg>
           </button>
@@ -122,16 +123,36 @@
       <section class="images">
         <ul class="images__list">
           <li class="images__item">
-            <img class="images__image" src="./images/image_1.jpg" alt="" />
+            <img
+              class="images__image"
+              src="./images/image_1.jpg"
+              alt="Anime"
+              tabindex="9"
+            />
           </li>
           <li class="images__item">
-            <img class="images__image" src="./images/image_2.jpg" alt="" />
+            <img
+              class="images__image"
+              src="./images/image_2.jpg"
+              alt="Anime"
+              tabindex="10"
+            />
           </li>
           <li class="images__item">
-            <img class="images__image" src="./images/image_3.jpg" alt="" />
+            <img
+              class="images__image"
+              src="./images/image_3.jpg"
+              alt="Anime"
+              tabindex="11"
+            />
           </li>
           <li class="images__item">
-            <img class="images__image" src="./images/image_4.jpg" alt="" />
+            <img
+              class="images__image"
+              src="./images/image_4.jpg"
+              alt="Anime"
+              tabindex="12"
+            />
           </li>
         </ul>
       </section>
@@ -143,7 +164,6 @@
 
       function changeBackground(event) {
         newBackground = "url(../../." + event.target.getAttribute("src") + ")";
-        console.log(newBackground);
         document.documentElement.style.setProperty(
           "--background-image",
           newBackground
@@ -152,6 +172,14 @@
 
       images.forEach((image) =>
         image.addEventListener("click", (event) => changeBackground(event))
+      );
+
+      images.forEach((image) =>
+        image.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.keyCode === 13) {
+            changeBackground(event);
+          }
+        })
       );
     </script>
   </body>

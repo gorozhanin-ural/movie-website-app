@@ -3,5 +3,22 @@
   align-items: center;
   color: currentcolor;
   text-decoration: none;
+  transition: transform 0.2s, opacity 0.1s;
   white-space: nowrap;
+}
+
+.header__menu-link:hover {
+  transform: rotate(5deg);
+}
+
+.header__menu-link:focus {
+  outline: none;
+}
+
+.header__menu-link:focus-visible {
+  transform: rotate(5deg);
+}
+
+.header__menu-link:active {
+  opacity: 0.5;
 }

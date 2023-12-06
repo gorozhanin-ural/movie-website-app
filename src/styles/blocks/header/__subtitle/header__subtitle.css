@@ -1,4 +1,5 @@
 .header__subtitle {
   font-size: var(--text-size-s, calc(100vw / 48));
+  text-align: center;
   text-transform: uppercase;
 }
