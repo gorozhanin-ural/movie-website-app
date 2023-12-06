@@ -1,0 +1,14 @@
+.rating__label {
+  display: flex;
+  inline-size: 35px;
+  block-size: 35px;
+  fill: none;
+  cursor: pointer;
+}
+
+@media (width < 1024px) {
+  .rating__label {
+    inline-size: 30px;
+    block-size: 30px;
+  }
+}

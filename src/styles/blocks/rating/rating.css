@@ -1,4 +1,5 @@
-.controls__rating {
+.rating {
   display: flex;
+  gap: 5px;
   margin-inline-start: 30px;
 }

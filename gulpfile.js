@@ -3,7 +3,10 @@ const concat = require("gulp-concat-css");
 const plumber = require("gulp-plumber");
 const del = require("del");
 const browserSync = require("browser-sync").create();
-const build = gulp.series(clean, gulp.parallel(html, css, fonts, images));
+const build = gulp.series(
+  clean,
+  gulp.parallel(html, css, fonts, images, icons)
+);
 const watchapp = gulp.parallel(build, watchFiles, serve);
 
 function html() {
@@ -30,6 +33,13 @@ function images() {
     .pipe(browserSync.reload({ stream: true }));
 }
 
+function icons() {
+  return gulp
+    .src("src/icons/**/*.{jpg,jpeg,png,svg,gif,ico,webp,avif}")
+    .pipe(gulp.dest("dist/icons"))
+    .pipe(browserSync.reload({ stream: true }));
+}
+
 function fonts() {
   return gulp
     .src("src/fonts/**/*.{ttf,woff,woff2,txt}")
@@ -48,6 +58,10 @@ function watchFiles() {
     ["src/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp,avif}"],
     gulp.series(images)
   );
+  gulp.watch(
+    ["src/icons/**/*.{jpg,jpeg,png,svg,gif,ico,webp,avif}"],
+    gulp.series(icons)
+  );
   gulp.watch(["src/fonts/**/*.{ttf,woff,woff2,txt}"], gulp.series(fonts));
 }
 
@@ -62,6 +76,7 @@ function serve() {
 exports.html = html;
 exports.css = css;
 exports.images = images;
+exports.icons = icons;
 exports.fonts = fonts;
 exports.clean = clean;
 exports.build = build;
